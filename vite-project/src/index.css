@@ -1,0 +1,42 @@
+#title{
+  color:rgb(255, 255, 255);
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 40px;
+}
+#container{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  column-gap: 10px;
+  row-gap: 100px;
+  padding: 50px;
+  justify-content: space-evenly;
+}
+#card{
+  overflow-wrap: break-word;
+  padding: 50px;
+}
+
+#cardpic:hover{
+  translate: 0px -10px;
+  color: red;
+}
+#cardpic{
+  transition: translate .5s;
+  height: 300px;
+  width:200px;
+  border-radius: 20px;
+}
+
+#cardreward{
+  color:aliceblue;
+  font-family: 'Courier New', Courier, monospace;
+}
+#cardname{
+  transition: color 1s;
+  color:aliceblue;
+  font-family: 'Courier New', Courier, monospace;
+  justify-items: center;
+  align-items: center;
+}
+
