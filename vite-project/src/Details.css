@@ -1,0 +1,32 @@
+#details_card {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px; 
+    padding: 50px;
+} 
+#detail_name{
+    display: flex;
+    align-self: flex-start;
+    justify-self: flex-start;
+    color:aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    
+}
+#detail_pic{
+    width: 400px;
+}
+
+#alias_text{
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: wrap;
+}
+
+#alias{
+    display: flex;
+    flex-flow: column wrap;
+    overflow: wrap;
+    width: 500px
+}
+

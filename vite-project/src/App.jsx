@@ -3,6 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Topten from './Topten'
 import Terror from './Terror';
 import Missing from './Missing';
+import Details from './Details';
 import './App.css'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route path='/' element={<Topten ten={ten}/>}/>
       <Route path='/terror' element={<Terror/>}/>
       <Route path='/missing' element={<Missing/>}/>
+      <Route path='/details' element={<Details/>}/>
     </Routes>
     
     
