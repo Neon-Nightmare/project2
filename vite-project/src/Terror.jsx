@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from "react-router-dom";
 import './index.css'
 
 export default function Terror(){
@@ -21,7 +22,15 @@ export default function Terror(){
     },[])
     return(
         <>
-            <p id='title'>Most Wanted Terror</p>
+            <div id='links'>
+                <Link to='/'>
+                    <p id='title'>Most Wanted</p>
+                </Link>
+                    <p id='title'>Terror</p>
+                <Link to='/missing'>
+                    <p id='title'>Missing</p>
+                </Link>
+            </div>
             <div id='container'>
                 {Terrorlist.map(x => {
                     return(

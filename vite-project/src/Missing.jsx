@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from "react-router-dom";
 import './index.css'
 
 export default function Missing(){
@@ -32,7 +33,16 @@ export default function Missing(){
     },[])
     return(
         <>
-            <p id='title'>Missing Persons</p>
+            <div id='links'>
+                <Link to='/terror'>
+                    <p id='title'>Terror</p>
+                </Link>
+                    <p id='title'>Missing</p>
+                <Link to='/'>
+                    <p id='title'>Most Wanted</p>
+                </Link>
+            </div>
+
             <div id='container'>
                 {Missinglist.map(x => {
                     return(

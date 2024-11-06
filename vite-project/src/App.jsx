@@ -4,13 +4,14 @@ import Topten from './Topten'
 import Terror from './Terror';
 import Missing from './Missing';
 import Details from './Details';
-import './App.css'
+import DetailsContext from "./DetailsContext";
+
+import './App.css';
 
 function App() {
-
+  const [details, setDetails] = useState({})
   const [ten, setTopten] = useState([]);
-  
-  const [Missinglist, setMissinglist] = useState([]);
+  const value = { details, setDetails }
   
   useEffect(() =>{
     //Top Most wanted
@@ -21,13 +22,14 @@ function App() {
     
   }, [])
   return (
-    <Routes>
-      <Route path='/' element={<Topten ten={ten}/>}/>
-      <Route path='/terror' element={<Terror/>}/>
-      <Route path='/missing' element={<Missing/>}/>
-      <Route path='/details' element={<Details/>}/>
-    </Routes>
-    
+    <DetailsContext.Provider value={value}>
+      <Routes>
+        <Route path='/' element={<Topten/>}/>
+        <Route path='/terror' element={<Terror/>}/>
+        <Route path='/missing' element={<Missing/>}/>
+        <Route path='/details' element={<Details/>}/>
+      </Routes>
+    </DetailsContext.Provider>
     
   )
 }
